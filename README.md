@@ -29,8 +29,10 @@ Im tired of python malware being lame.
 - End session with .endsession
   
 - Each infected device has a dedicated channel in your discord server!
+- **WINDOWS ONLY** (for now...)
+  
 - **More Features Coming Soon!**
-
+  
 # Usage
 
 *if you dont know anything about python, it may be difficult to get slasher running*
