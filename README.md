@@ -13,6 +13,21 @@ Im tired of python malware being lame.
 
 *Constructive Critisizm is Appreciated! Yes, im aware its sloppy and written terribly. Ill fix it up in the future.*
 
+# Features
+- Live Remote Shell
+- Chrome, Opera, Brave Passwords & Cookies Stealer
+- Discord Token Stealer
+- Keylogger (dump with .keydump)
+- BTC Clipboard Address Swapper
+- Freeze PC (until it is restarted)
+- Take Webcam Photo
+- Take Screenshot
+- Change Wallpaper
+- Ip & Geolocation Info Grabber
+- Send Custom Alerts (pop-up box)
+- Play Custom Text-to-speech messages
+
+- **More Features Coming Soon!**
 
 # Usage
 
