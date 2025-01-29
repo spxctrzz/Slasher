@@ -1,4 +1,4 @@
-# Slasher
+# Slasher RAT
 Im tired of python malware being lame.
 
 - Slasher is a 3-Stage Attack Remote Access Trojan written in Python. 
@@ -26,7 +26,9 @@ Im tired of python malware being lame.
 - Ip & Geolocation Info Grabber
 - Send Custom Alerts (pop-up box)
 - Play Custom Text-to-speech messages
-
+- End session with .endsession
+  
+- Each infected device has a dedicated channel in your discord server!
 - **More Features Coming Soon!**
 
 # Usage
