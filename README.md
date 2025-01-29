@@ -1,5 +1,31 @@
 # Slasher
-Slasher is a 3-Stage Attack Remote Access Trojan written in Python, designed to be self-sufficient and persistent after the first run.
+Im tired of python malware being lame.
+
+Slasher is a 3-Stage Attack Remote Access Trojan written in Python. 
+
+It is designed to be self-sufficient and doesnt depend on the target's python installation being set up properly, solving the most annoying and unpredicatble part of python malware developement.
+
+The target only needs python installed on their system for the first run. After that first run slasher makes itself self-sufficient and persists through restarts. 
+
+It will even continue running if the user uninstalls their python environment!
+
+Slasher uses a discord bot for remote access instead of a server for ease of use.
+
+# Usage
+
+*if you dont know anything about python, it may be difficult to get slasher running*
+
+1. Set the "TOKEN" variable at the top of payload.py to you your discord bot token.
+
+2. In payload.py, find the variable "id" on line 102 and replace "discord_server_id" with the ID of the server you want the bot to message in.
+
+3. Obfuscate payload.py to avoid AV detections and your bot token being found. (I use [Pyobfuscate](https://pyobfuscate.com))
+
+4. Put embed.py, payload.py, run.vbs and runner.bat in a zip and upload it to some website to download later. (Private github repo is easiest)
+   
+5. In dropper.py, set the "url" variable on line 24 to the download link to your zip file.
+
+6. Obfuscate dropper.py or bundle it with another program! Anybody who runs it will be infected!
 
 # How It Works
 Slasher is a three-stage attack comprised of 5 files. Below is a description of each file's functionality in order of execution.
@@ -39,21 +65,21 @@ payload.py is the payload in the form of a discord bot that runs on the users ma
 Not much else to say here.
 
 
-## First Run
+# First Run
 On the First run, the payload runs directly when embed.py calls it with a sys.executable subprocess. This is to avoid issues with conflicting python installations, and may be changed in the future.
 A registry key is set to point to run.vbs on startup. 
 
 
 
-### Persistance After System Restart
+# Persistance After System Restart
 
 ## *runner.bat*
 
-runner.bat is a middleman between run.vbs and the payload execution. It checks if the dedicated environment is set up and determines if payload.py or embed.py should be run. 
+runner.bat acts as a middleman between run.vbs and the payload execution. It checks if the dedicated environment is set up and determines if payload.py or embed.py should be run. 
 
 If the environement's path DOES exist, it assumes it is set up properly and calls payload.py directly with the dedicated python 3.9.8 executable that was downloaded.
 
-If the environments path DOES NOT exist, it will call embed.py and install it before running. If the dropper executed properly, this should never happen. It is just a failsafe.
+If the environments path DOES NOT exist, it will check environment variables for a python installtion to run embed.py with, and install the dedicated environment. If the dropper executed properly, this should never happen. It is just a failsafe.
 
 This is helpful to ensure the malware continues functioning on the target system long-term.
 
