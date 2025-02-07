@@ -1,12 +1,12 @@
 # Slasher RAT
 
-- Slasher is a 3-Stage Remote Access Trojan written in Python. 
+- Slasher is a 3-Stage RAT written in Python. 
 
-- It is designed to be self-sufficient and doesnt depend on the target's python installation being set up properly, kinda solving the most annoying and unpredicatble part of python malware developement.
+- It is designed to be self-sufficient and doesnt depend on the target's python installation being set up properly.
 
 - The target only needs python installed on their system for the first run. 
 
-- It will even continue working if the user uninstalls their (known) python environment!
+- It will even continue working if the user uninstalls their (known) python environment.
 
 - Slasher uses a discord bot for remote access instead of a server for ease of use.
 
